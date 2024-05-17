@@ -13,6 +13,17 @@ const readOnlyColumns = [
 	'tanggalLahir',
 	'namaDokter',
 	'tandaTanganDokter',
+	'anamnesis',
+	'pemeriksaanFisikMasuk',
+	'pemeriksaan',
+	'laboratorium',
+	'tindakan',
+	'obat',
+	'prognosa',
+	'kondisiPulang',
+	'rencanaPengobatanLanjutan',
+	'pengobatanLanjutan',
+	'footer',
 ] as const
 
 export type SepRecord = Record<(typeof readOnlyColumns)[number], string>

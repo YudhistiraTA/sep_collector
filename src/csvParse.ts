@@ -12,6 +12,22 @@ const columns = [
 	'poli',
 	'tanggalSep',
 	'tanggalPulangSep',
+	'noRm',
+	'jenisKelamin',
+	'tanggalLahir',
+	'namaDokter',
+	'tandaTanganDokter',
+	'anamnesis',
+	'pemeriksaanFisikMasuk',
+	'pemeriksaan',
+	'laboratorium',
+	'tindakan',
+	'obat',
+	'prognosa',
+	'kondisiPulang',
+	'rencanaPengobatanLanjutan',
+	'pengobatanLanjutan',
+	'footer',
 ]
 
 export default function csvParse(path: string): Promise<SepRecord[]> {
@@ -24,14 +40,7 @@ export default function csvParse(path: string): Promise<SepRecord[]> {
 		)
 		const records: SepRecord[] = []
 		parser.on('data', (chunk: SepRecord) => {
-			records.push({
-				...chunk,
-				noRm: '',
-				jenisKelamin: '',
-				tanggalLahir: '',
-				namaDokter: '',
-				tandaTanganDokter: '',
-			})
+			records.push(chunk)
 		})
 
 		parser.on('end', () => {
