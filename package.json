@@ -1,0 +1,16 @@
+{
+	"scripts": {
+		"start": "rimraf .\\dist && tsc && node dist/src/index.js"
+	},
+	"devDependencies": {
+		"@types/node": "^20.12.12",
+		"@types/pg": "^8.11.6",
+		"rimraf": "^5.0.7",
+		"typescript": "^5.4.5"
+	},
+	"dependencies": {
+		"csv-parse": "^5.5.6",
+		"dotenv": "^16.4.5",
+		"pg": "^8.11.5"
+	}
+}
