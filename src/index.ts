@@ -15,9 +15,9 @@ client.connect()
 
 async function main() {
 	try {
-		let data = await csvParse('./data/input/notOnNotes.csv')
+		let data = await csvParse('./data/input/fromResult.csv')
 		data = await dbQuery(client, data)
-		csvWrite('./data/output/result.csv', data)
+		csvWrite('./data/output/result2.csv', data)
 	} catch (error) {
 		console.error('Error:', error)
 	} finally {

@@ -36,6 +36,8 @@ export default function csvParse(path: string): Promise<SepRecord[]> {
 			parse({
 				fromLine: 2,
 				columns,
+				delimiter: ';',
+				relax_quotes: true,
 			}),
 		)
 		const records: SepRecord[] = []
